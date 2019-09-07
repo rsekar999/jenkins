@@ -1,5 +1,7 @@
-node() {
+node('maven') {
   stage('Compile') {
-    sh 'echo hello'
+    sh 'hostname'
+    git 'https://github.com/rsekar999/jenkins.git'
+    
   }
 }
