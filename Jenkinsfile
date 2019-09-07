@@ -1,7 +1,11 @@
 node('maven') {
   stage('Compile') {
     sh 'hostname'
-    git 'https://github.com/rsekar999/jenkins.git'
-    
+    git 'https://github.com/pdurbin/maven-hello-world.git'
+    sh '''
+      cd my-app
+      mvn clean compile package
+      ls target
+    '''
   }
 }
