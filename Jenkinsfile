@@ -5,7 +5,8 @@ node('maven') {
     sh '''
       ls
       cd my-app
-      maven clean compile package
+      mvn --version
+      mvn clean compile package
       ls target
     '''
   }
