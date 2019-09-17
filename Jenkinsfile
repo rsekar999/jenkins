@@ -5,7 +5,7 @@ node('maven') {
     sh '''
       ls
       cd my-app
-      mvn clean compile package
+      maven clean compile package
       ls target
     '''
   }
